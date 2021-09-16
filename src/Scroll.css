@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+.app_text {
+  width: 45%;
+  background-color: #001f3b;
+  color: #fff;
+}
+
+.app_image {
+  width: 55%;
+  background-color: #03121f;
+}
+
+.app_circle {
+  position: absolute;
+  top: 31%;
+  left: 51.5%;
+  transform: translate(-50%, -50%);
+  height: 240px;
+  width: 200px;
+  border-bottom-right-radius: 150px;
+  border-top-right-radius: 150px;
+  background-color: #001f3b;
+}
+
+.headings2 {
+  position: absolute;
+  top: 26.7%;
+  left: 36.5%;
+  z-index: 1;
+}
+.headings1 {
+  position: absolute;
+  top: 24%;
+  left: 36.5%;
+  z-index: 1;
+}
+
+.headings3 {
+  position: absolute;
+  top: 35.3%;
+  left: 41.5%;
+  z-index: 1;
+}
+.pizza {
+  position: absolute;
+  top: -15%;
+  left: 45.5%;
+  height: 50%;
+  width: 25%;
+}
+.dominoMobile1 {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  object-fit: contain;
+  height: 300px;
+  z-index: 1;
+}
+.dominoMobile2 {
+  margin-left: 40%;
+  margin-top: 13%;
+  object-fit: contain;
+  height: 350px;
+}
+.dominoBread1 {
+  position: absolute;
+  top: -20%;
+  left: 87%;
+}
+.dominoBread2 {
+  margin-left: 53%;
+}
+.headingbelow1 {
+  margin-top: 65%;
+  margin-left: -57%;
+}
+.headingbelow3 {
+  margin-top: 6.5%;
+  margin-left: -45%;
+}
+.headingbelow2 {
+  margin-left: -45%;
+}
+.headingbelow21 {
+  margin-top: 2%;
+  margin-left: -62%;
+}
+a {
+  margin-left: 85%;
+  color: grey;
+  text-decoration: none;
+}
