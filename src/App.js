@@ -9,18 +9,20 @@ import Nasaimage1 from "./measure-total-body-weight-through-fitness-app.png";
 import Nasaimage2 from "./nasa-fitness-tracking-mobile-app.png";
 import Blockchain1 from "./veme-app-ui-design.png";
 import Blockchain2 from "./veme-blockchain-app-developed.png";
+import { Tween } from "react-gsap";
+import dominobread from "./dominos-bread.png";
 function App() {
   return (
     <div className="App">
       <div></div>
       <div className="container">
         <Controller globalSceneOptions={{ triggerHook: "onLeave" }}>
-          <Scene pin>
+          <Scene classToggle="visible" pin>
             <div className="panel blue">
               <Scroll1 />
             </div>
           </Scene>
-          <Scene pin>
+          <Scene classToggle="visible" pin>
             <div className="panel turqoise">
               <Scroll2
                 color1="#20124D"

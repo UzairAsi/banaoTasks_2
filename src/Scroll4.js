@@ -64,35 +64,66 @@ function Scroll4({
           Coming Soon
         </h3>
       </div>
-      <div style={{ backgroundColor: color2 }} className="app_image">
-        <img
-          style={{
-            position: "absolute",
-            objectFit: "contain",
-            left: "52%",
-            top: topm,
-            height: "380px",
-            marginLeft: "7%",
-            marginTop: "0%",
-          }}
-          src={image2}
-          alt="..."
-        />
-        <img
-          style={{
-            position: "absolute",
-            objectFit: "contain",
-            left: "90%",
-            height: "380px",
-            marginLeft: "-5%",
-            marginTop: "-5%",
-          }}
-          src={image1}
-          alt="..."
-        />
+      <div
+        style={{ backgroundColor: color2, overflow: "hidden" }}
+        className="app_image"
+      >
+        <ScrollTrigger start="-200px center" end="200px center" scrub={0.5}>
+          <Tween
+            from={{
+              y: "500px",
+              x: "100px",
+              opacity: 0,
+            }}
+            to={{
+              y: "0px",
+              x: "0px",
+              opacity: 1,
+            }}
+          >
+            <img
+              style={{
+                objectFit: "cover",
+                left: "90%",
+                overflow: "hidden",
+                height: "380px",
+                marginLeft: "65%",
+                marginTop: "-5%",
+              }}
+              src={image1}
+              alt="..."
+            />
+          </Tween>
+          <Tween
+            from={{
+              y: "50px",
+              x: "0px",
+              opacity: 0,
+            }}
+            to={{
+              y: "0px",
+              x: "0px",
+              opacity: 1,
+            }}
+          >
+            <img
+              style={{
+                position: "absolute",
+                objectFit: "cover",
+                left: "52%",
+                top: topm,
+                height: "380px",
+                marginLeft: "7%",
+                marginTop: "0%",
+              }}
+              src={image2}
+              alt="..."
+            />
+          </Tween>
+        </ScrollTrigger>
       </div>
       <div style={{ backgroundColor: color1 }} className="app_circle">
-        <ScrollTrigger start="-10px top" end="-5px center" scrub={0.5}>
+        <ScrollTrigger start="0px top" end="2px center" scrub={0.5}>
           <svg
             width="400"
             height="300"
@@ -109,10 +140,62 @@ function Scroll4({
           >
             <Tween
               from={{
-                svgDraw: 0.41,
+                svgDraw: 1,
               }}
               to={{
-                svgDraw: 0.55,
+                svgDraw: 1,
+                fill: "#1276b1",
+              }}
+            >
+              <circle
+                fill="white"
+                className="ball ball01"
+                r="9"
+                cx="220"
+                cy="180"
+              ></circle>
+            </Tween>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="222"
+              cy="60"
+            ></circle>
+            <circle
+              fill="white"
+              className="ball ball01"
+              r="9"
+              cx="8"
+              cy="215"
+            ></circle>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="7"
+              cy="16"
+            ></circle>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="105"
+              cy="-20"
+            ></circle>
+            <circle
+              fill="white"
+              className="ball ball01"
+              r="9"
+              cx="115"
+              cy="250"
+            ></circle>
+            <Tween
+              from={{
+                svgDraw: 1,
+              }}
+              to={{
+                svgDraw: 1,
               }}
             >
               <circle
@@ -120,10 +203,38 @@ function Scroll4({
                 cx="98"
                 cy="115"
                 stroke="white"
-                strokeWidth="5"
+                strokeWidth="3"
                 fill="transparent"
               />
             </Tween>
+            <Tween
+              from={{
+                svgDraw: 0,
+              }}
+              to={{
+                svgDraw: 1,
+                stroke: "#1276b1",
+              }}
+            >
+              <path
+                d="M 224 52 A 200 173 0 0 1 210 192"
+                fill="none"
+                stroke="#1276b1"
+                strokeWidth="4"
+              />
+            </Tween>
+            <path
+              d="M -29 63 A 134 141 0 0 1 112 -20"
+              fill="none"
+              stroke="#1276b1"
+              strokeWidth="2"
+            />
+            <path
+              d="M 66 -20 A 142 130 0 0 1 229 72"
+              fill="none"
+              stroke="#1276b1"
+              strokeWidth="2"
+            />
           </svg>
         </ScrollTrigger>
       </div>

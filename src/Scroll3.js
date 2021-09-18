@@ -42,25 +42,53 @@ function Scroll3() {
         <a href="/">S K I P</a>
       </div>
       <div style={{ backgroundColor: "#f8f8f8" }} className="app_image">
-        <img
-          style={{
-            height: "60%",
-            marginTop: "8%",
-            marginLeft: "-18%",
-          }}
-          src={Mobileimage1}
-          alt="..."
-        />
-        <img
-          style={{
-            height: "75%",
-            position: "absolute",
-            top: "11%",
-            left: "75%",
-          }}
-          src={Mobileimage2}
-          alt="..."
-        />
+        <ScrollTrigger start="-200px center" end="200px center" scrub={0.5}>
+          <Tween
+            from={{
+              y: "500px",
+              x: "100px",
+              opacity: 0,
+            }}
+            to={{
+              y: "0px",
+              x: "0px",
+              opacity: 1,
+            }}
+          >
+            <img
+              style={{
+                height: "60%",
+                marginTop: "8%",
+                marginLeft: "-18%",
+              }}
+              src={Mobileimage1}
+              alt="..."
+            />
+          </Tween>
+          <Tween
+            from={{
+              y: "500px",
+              x: "100px",
+              opacity: 0,
+            }}
+            to={{
+              y: "0px",
+              x: "0px",
+              opacity: 1,
+            }}
+          >
+            <img
+              style={{
+                height: "75%",
+                position: "absolute",
+                top: "11%",
+                left: "75%",
+              }}
+              src={Mobileimage2}
+              alt="..."
+            />
+          </Tween>
+        </ScrollTrigger>
       </div>
       <div style={{ backgroundColor: "#6639d6" }} className="app_circle">
         <ScrollTrigger start="-10px top" end="-5px center" scrub={0.5}>
@@ -80,22 +108,108 @@ function Scroll3() {
           >
             <Tween
               from={{
-                svgDraw: 0.55,
+                svgDraw: 1,
               }}
               to={{
-                svgDraw: 0.7,
+                svgDraw: 1,
+                fill: "#1276b1",
               }}
-              duration={300}
+            >
+              <circle
+                fill="white"
+                className="ball ball01"
+                r="9"
+                cx="115"
+                cy="250"
+              ></circle>
+            </Tween>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="220"
+              cy="180"
+            ></circle>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="222"
+              cy="60"
+            ></circle>
+            <circle
+              fill="white"
+              className="ball ball01"
+              r="9"
+              cx="8"
+              cy="215"
+            ></circle>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="7"
+              cy="16"
+            ></circle>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="105"
+              cy="-20"
+            ></circle>
+
+            <Tween
+              from={{
+                svgDraw: 1,
+              }}
+              to={{
+                svgDraw: 1,
+              }}
             >
               <circle
                 r="137"
                 cx="98"
                 cy="115"
                 stroke="white"
-                strokeWidth="5"
+                strokeWidth="3"
                 fill="transparent"
               />
             </Tween>
+            <Tween
+              from={{
+                svgDraw: 0,
+              }}
+              to={{
+                svgDraw: 1,
+                stroke: "#1276b1",
+              }}
+            >
+              <path
+                d="M 221 179 A 170 151 0 0 1 101 257"
+                fill="none"
+                stroke="#1276b1"
+                strokeWidth="4"
+              />
+            </Tween>
+            <path
+              d="M 224 52 A 200 173 0 0 1 210 192"
+              fill="none"
+              stroke="#1276b1"
+              strokeWidth="4"
+            />
+            <path
+              d="M -29 63 A 134 141 0 0 1 112 -20"
+              fill="none"
+              stroke="#1276b1"
+              strokeWidth="2"
+            />
+            <path
+              d="M 66 -20 A 142 130 0 0 1 229 72"
+              fill="none"
+              stroke="#1276b1"
+              strokeWidth="2"
+            />
           </svg>
         </ScrollTrigger>
       </div>

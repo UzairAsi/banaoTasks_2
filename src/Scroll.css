@@ -67,6 +67,7 @@
   height: 300px;
   z-index: 1;
 }
+
 .dominoMobile2 {
   margin-left: 40%;
   margin-top: 13%;
@@ -100,4 +101,28 @@ a {
   margin-left: 85%;
   color: grey;
   text-decoration: none;
+}
+.box {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transform-origin: bottom;
+}
+.bounce-3 {
+  animation-name: bounce-3;
+  animation-timing-function: ease;
+}
+@keyframes bounce-3 {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

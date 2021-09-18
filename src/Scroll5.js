@@ -2,7 +2,8 @@ import "./App.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "react-gsap";
 import { Controls, PlayState, Tween } from "react-gsap";
-function Scroll2({
+
+function Scroll5({
   color1,
   color2,
   he1,
@@ -64,34 +65,30 @@ function Scroll2({
         </h3>
       </div>
       <div
-        style={{
-          backgroundColor: color2,
-          overflow: "hidden",
-        }}
+        style={{ backgroundColor: color2, overflow: "hidden" }}
         className="app_image"
       >
-        <ScrollTrigger start="-50px center" end="200px center" scrub={0.5}>
+        <ScrollTrigger start="-200px center" end="200px center" scrub={0.5}>
           <Tween
             from={{
-              y: "100px",
+              y: "500px",
               x: "100px",
               opacity: 0,
             }}
             to={{
-              yPercent: 0,
-              xPercent: 0,
+              y: "0px",
+              x: "0px",
               opacity: 1,
             }}
           >
             <img
               style={{
                 objectFit: "cover",
-                marginRight: "-60%",
-                zIndex: "0",
-                height: "380px",
-                marginLeft: "-15%",
-                marginTop: "-24%",
+                left: "90%",
                 overflow: "hidden",
+                height: "380px",
+                marginLeft: "65%",
+                marginTop: "-5%",
               }}
               src={image1}
               alt="..."
@@ -104,8 +101,8 @@ function Scroll2({
               opacity: 0,
             }}
             to={{
-              yPercent: 0,
-              xPercent: 0,
+              y: "0px",
+              x: "0px",
               opacity: 1,
             }}
           >
@@ -114,12 +111,10 @@ function Scroll2({
                 position: "absolute",
                 objectFit: "cover",
                 left: "52%",
-                zIndex: "0",
                 top: topm,
                 height: "380px",
                 marginLeft: "7%",
                 marginTop: "0%",
-                overflow: "hidden",
               }}
               src={image2}
               alt="..."
@@ -128,7 +123,7 @@ function Scroll2({
         </ScrollTrigger>
       </div>
       <div style={{ backgroundColor: color1 }} className="app_circle">
-        <ScrollTrigger start="-10px top" end="-5px center" scrub={0.5}>
+        <ScrollTrigger start="0px top" end="2px center" scrub={0.5}>
           <svg
             width="400"
             height="300"
@@ -143,13 +138,6 @@ function Scroll2({
               left: "0%",
             }}
           >
-            <circle
-              fill="white"
-              className="ball ball01"
-              r="9"
-              cx="220"
-              cy="180"
-            ></circle>
             <Tween
               from={{
                 svgDraw: 1,
@@ -163,10 +151,17 @@ function Scroll2({
                 fill="white"
                 className="ball ball01"
                 r="9"
-                cx="222"
-                cy="60"
+                cx="220"
+                cy="180"
               ></circle>
             </Tween>
+            <circle
+              fill="#1276b1"
+              className="ball ball01"
+              r="9"
+              cx="222"
+              cy="60"
+            ></circle>
             <circle
               fill="white"
               className="ball ball01"
@@ -181,7 +176,6 @@ function Scroll2({
               cx="7"
               cy="16"
             ></circle>
-
             <circle
               fill="#1276b1"
               className="ball ball01"
@@ -222,15 +216,27 @@ function Scroll2({
                 stroke: "#1276b1",
               }}
             >
+              {/* <path
+                d=" M -37 60 A 142 139 0 1 1 -27 191"
+                fill="none"
+                stroke="blue"
+                strokeWidth="3"
+              /> */}
               <path
-                d="M 66 -20 A 142 130 0 0 1 229 72"
+                d="M 224 52 A 200 173 0 0 1 210 192"
                 fill="none"
                 stroke="#1276b1"
-                strokeWidth="2"
+                strokeWidth="4"
               />
             </Tween>
             <path
               d="M -29 63 A 134 141 0 0 1 112 -20"
+              fill="none"
+              stroke="#1276b1"
+              strokeWidth="2"
+            />
+            <path
+              d="M 66 -20 A 142 130 0 0 1 229 72"
               fill="none"
               stroke="#1276b1"
               strokeWidth="2"
@@ -242,4 +248,4 @@ function Scroll2({
   );
 }
 
-export default Scroll2;
+export default Scroll5;
